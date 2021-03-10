@@ -14,3 +14,12 @@ $ sbt fastLinkJS
 $ node target/scala-2.13/scala-js-tutorial-fastopt/main.js
 Hello world!
 ```
+
+## Auto rebuild Javascript
+```shell
+$ sbt
+sbt:Scala.js Tutorial> ~fastLinkJS
+[success] (...)
+[info] 1. Monitoring source files for scalajs_tutorial/fastLinkJS...
+[info]    Press <enter> to interrupt or '?' for more options.
+```
