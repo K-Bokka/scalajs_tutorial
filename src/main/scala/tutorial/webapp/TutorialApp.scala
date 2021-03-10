@@ -3,14 +3,18 @@ package tutorial.webapp
 import org.scalajs.dom
 import org.scalajs.dom.document
 
-import scala.scalajs.js.annotation.JSExportTopLevel
-
 object TutorialApp {
   def main(args: Array[String]): Unit = {
-    appendPar(document.body, "Hello World!")
+    document.addEventListener("DOMContentLoaded", { _: dom.Event => setupUI() })
   }
 
-  @JSExportTopLevel("addClickedMessage")
+  def setupUI(): Unit = {
+    val button = document.createElement("button")
+    button.textContent = "Click me!"
+    button.addEventListener("click", { _: dom.MouseEvent => addClickedMessage() })
+    document.body.appendChild(button)
+  }
+
   def addClickedMessage(): Unit = {
     appendPar(document.body, "You clicked the button!")
   }
