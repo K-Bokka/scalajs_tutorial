@@ -13,6 +13,8 @@ object TutorialApp {
     button.textContent = "Click me!"
     button.addEventListener("click", { _: dom.MouseEvent => addClickedMessage() })
     document.body.appendChild(button)
+
+    appendPar(document.body, "Hello World")
   }
 
   def addClickedMessage(): Unit = {
