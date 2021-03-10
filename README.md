@@ -9,7 +9,7 @@ Hello world!
 ```
 
 ## Generate Javascript
-```
+```shell
 $ sbt fastLinkJS
 $ node target/scala-2.13/scala-js-tutorial-fastopt/main.js
 Hello world!
