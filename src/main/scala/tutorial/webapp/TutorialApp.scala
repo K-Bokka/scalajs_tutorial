@@ -3,9 +3,16 @@ package tutorial.webapp
 import org.scalajs.dom
 import org.scalajs.dom.document
 
+import scala.scalajs.js.annotation.JSExportTopLevel
+
 object TutorialApp {
   def main(args: Array[String]): Unit = {
     appendPar(document.body, "Hello World!")
+  }
+
+  @JSExportTopLevel("addClickedMessage")
+  def addClickedMessage(): Unit = {
+    appendPar(document.body, "You clicked the button!")
   }
 
   def appendPar(targetNode: dom.Node, text: String): Unit = {
